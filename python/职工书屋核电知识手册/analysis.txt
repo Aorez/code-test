@@ -1,0 +1,25 @@
+职工书屋核电知识手册开始阅读
+找到第一页
+https://img1-qn.bookan.com.cn/jpage8/2101598/2101598-310262597/38cc4ca8_big.jpg
+发现38cc4ca8可能是特殊标识
+搜索38cc4ca8
+得到
+https://api.bookan.com.cn/resource/getHash?resourceType=3&resourceId=2101598&issueId=310262597&start=1&end=157
+他的响应
+gethash.json
+替换
+01d3b323
+8c3e6e1e
+成功得到页面
+
+用python爬取某一本书的每一页图片
+第一页的url是
+https://img1-qn.bookan.com.cn/jpage8/2101598/2101598-310262597/38cc4ca8_big.jpg
+之后每一页都是类似url
+不同的地方在于38cc4ca8字符串
+一页对应一个字符串
+字符串在getHash.json的json字符串中，其中page 1 hash 38cc4ca8
+就是指第一页url中为38cc4ca8这个字符串
+后续每一页的信息都在getHash.json中
+爬取到的图片依次按页数命名后保存到本地d盘下hashbook文件夹中
+可以写出代码吗？爬取的时候记得间隔几秒休眠，避免反爬。
